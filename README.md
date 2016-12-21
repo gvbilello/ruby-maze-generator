@@ -8,11 +8,11 @@ maze width: 800, maze height: 800, cell width: 10
 Examples:
 
 800x800 maze with cell width of 100
-[https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-100.png]
+![alt tag](https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-100.png)
 
 800x800 maze with cell width of 40
-[https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-40.png]
+![alt tag](https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-40.png)
 
 800x800 maze with cell width of 10
-[https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-10.png]
+![alt tag](https://github.com/gvbilello/ruby-maze-generator/blob/master/examples/ex-800x800-cell-width-10.png)
 
