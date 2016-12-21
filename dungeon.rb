@@ -1,21 +1,3 @@
-require 'pry'
-require 'pry-byebug'
-
-class Cell
-
-  attr_reader :x, :y, :walls
-  attr_accessor :visited
-
-  def initialize(args = {})
-    @x = args.fetch(:x)
-    @y = args.fetch(:y)
-    # @walls order: top, right, bottom, left
-    @walls = [true, true, true, true]
-    @visited = false
-  end
-
-end
-
 class Dungeon
 
   attr_reader :height, :width, :dungeon, :current, :stack
@@ -88,7 +70,7 @@ class Dungeon
     end
   end
 
-  def create_doors
+  def create_maze
     # start in top left corner
     @current = @dungeon[0][0]
     # p "y:#{current.y}, x:#{@current.x}"
@@ -135,16 +117,9 @@ class Dungeon
   def show_dungeon
     @dungeon.each do |row|
       row.each do |cell|
-        p cell
+        #
       end
     end
   end
 
 end
-
-# create 4x4 dungeon
-dungeon = Dungeon.new(height: 4, width: 4)
-dungeon.create_dungeon
-# create maze by removing walls
-dungeon.create_doors
-dungeon.show_dungeon
