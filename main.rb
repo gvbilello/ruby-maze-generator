@@ -10,7 +10,7 @@ class MazeWindow < Gosu::Window
 
   def initialize(height = 820, width = 820, fullscreen = false)
     super
-    @cell_width = 100
+    @cell_width = 10
     @dungeon = Dungeon.new(height: (self.height - 20) / @cell_width, width: (self.width - 20) / @cell_width)
     @dungeon.create_dungeon
     @dungeon.create_maze
