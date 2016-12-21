@@ -8,10 +8,10 @@ require 'pry-byebug'
 
 class MazeWindow < Gosu::Window
 
-  def initialize(height = 800, width = 800, fullscreen = false)
+  def initialize(height = 820, width = 820, fullscreen = false)
     super
-    @cell_width = 10
-    @dungeon = Dungeon.new(height: self.height / @cell_width, width: self.width / @cell_width)
+    @cell_width = 100
+    @dungeon = Dungeon.new(height: (self.height - 20) / @cell_width, width: (self.width - 20) / @cell_width)
     @dungeon.create_dungeon
     @dungeon.create_maze
     @dungeon_cells = @dungeon.dungeon
@@ -28,8 +28,8 @@ class MazeWindow < Gosu::Window
   	@dungeon_cells.each do |row|
       row.each do |cell|
         w = @cell_width
-        x = cell.x * w
-        y = cell.y * w
+        x = cell.x * w + 10
+        y = cell.y * w + 10
         c = 0xff_ffffff
         # draw top wall
         if cell.walls[0]
